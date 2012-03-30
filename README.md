@@ -9,4 +9,5 @@ It include config file for:
     - Emacs
     - Mutt
     - Irssi
+    - hosts
     - ...
