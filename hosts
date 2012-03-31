@@ -1,28 +1,3 @@
-127.0.0.1	localhost
-127.0.1.1	tonghuix-1011PX
-
-# The following lines are desirable for IPv6 capable hosts
-::1     ip6-localhost ip6-loopback
-fe00::0 ip6-localnet
-ff00::0 ip6-mcastprefix
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-
-## Google èœ¬åïŒè§£å³äžäºGoogleåå¶çžå³æå¡æ æ³è®¿é®çææ¶æ§é®é¢ïŒ
-
-208.80.152.2 en.wikipedia.org
-208.80.152.2 wikipedia.org
-208.80.152.2 www.wikipedia.org
-208.80.152.2 zh.wikipedia.org
-# Xmarks(ç«ç)
-64.147.188.86 www.xmarks.com
-64.147.188.92 api.xmarks.com
-64.147.188.89 login.xmarks.com
-64.147.188.87 sync.xmarks.com
-64.147.188.86 static.xmarks.com
-64.147.188.86 download.xmarks.com
-64.147.188.86 my.xmarks.com
-
 
 #E#HostsX: HostsX èœ¯ä»¶å¹¿åè¿æ»€/éªè¯ç±?æžžæ EAç³»åïŒçº¢è­Šç­ïŒ?
 127.0.0.1        gosredirector.ea.com

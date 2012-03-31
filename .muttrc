@@ -9,8 +9,11 @@ set certificate_file=~/.mutt/certificates
 
 #编辑器 直接在 Mutt 的终端里使用非图形界面的 Emacs (emacs -nw)
 set editor="emacs -nw"
+set signature="sign"
+
 
 #设置邮件发送程序
+
 set sendmail="/usr/bin/msmtp"
 
 #建立信箱
