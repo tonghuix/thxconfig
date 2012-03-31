@@ -1,5 +1,5 @@
  (require 'tls)
-;(require 'ssl)
+
 (setq erc-default-coding-system '(utf-8 . utf-8))
 
 (setq erc-nick "tonghuix"
@@ -13,11 +13,11 @@
   ; (erc-tls :server "irc.oftc.net" :port 6697
    ;     :nick "ootput" :full-name "ootput")
    (erc-tls :server "irc.freenode.net" :port 6697
-        :nick "tonghuix" :full-name "tonghuix-ERC"))
+        :nick "tonghuix" :full-name "tonghuix"))
 
 (erc-autojoin-mode t)              ;joining && autojoining
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#ubuntu" "#ubuntu-cn" "#openbrd" "chinalug" "tizen")))
+      '(("freenode.net" "#ubuntu" "#ubuntu-cn" "#openbrd")))
 
 (require 'erc-stamp)               ;时间戳
 (erc-stamp-mode t)
