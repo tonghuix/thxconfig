@@ -220,3 +220,7 @@
 ;;====================== ERC ======================
 
 (load-file "~/.erc.el")
+
+;;================== Weibo.emacs ===================
+(add-to-list 'load-path "/home/tonghuix/.emacs.d/weibo.emacs/")
+(require 'weibo)

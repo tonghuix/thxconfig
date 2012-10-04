@@ -112,7 +112,8 @@ channels = (
   { name = "#ubuntu-cn"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#yocto"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#openbrd"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#tizen"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#open-drone"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
