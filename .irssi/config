@@ -24,6 +24,12 @@ servers = (
   { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
+  { 
+    address = "irc.gimp.org"; 
+    chatnet = "GIMPnet"; 
+    port = "7000"; 
+    autoconnect = "yes";
+  },
   {
     address = "irc.freenode.net";
     chatnet = "freenode";
@@ -90,30 +96,29 @@ chatnets = {
     max_msgs = "3";
     max_whois = "30";
   };
-  LinkNet = {
+  GIMPnet = {
     type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
+    nick = "tonghuix";
   };
   SILC = { type = "SILC"; };
   Ubuntu = { type = "IRC"; };
   freenode = {
     type = "IRC";
     nick = "tonghuix";
-    autosendcmd = "/^msg nickserv identify xxxxxxxx;wait 2000";
+    autosendcmd = "/^msg nickserv identify yui0258;wait 2000";
   };
   nickserv = { type = "IRC"; autosendcmd = "“/^msg"; };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
+  { name = "#gnome"; chatnet = "gimpnet"; autojoin = "Yes"; },
+  { name = "#gnome-asia"; chatnet = "gimpnet"; autojoin = "Yes"; },
+  { name = "#gnome-cn"; chatnet = "gimpnet"; autojoin = "Yes"; },
   { name = "#ubuntu-cn"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#yocto"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#tizen"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#open-drone"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#openbrd"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
