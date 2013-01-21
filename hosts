@@ -1,12 +1,7 @@
-127.0.0.1	localhost
-127.0.1.1	hostname	
-
-# The following lines are desirable for IPv6 capable hosts
-::1     ip6-localhost ip6-loopback
-fe00::0 ip6-localnet
-ff00::0 ip6-mcastprefix
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
+207.97.227.239 github.com
+65.74.177.129 github.com
+65.74.177.129 www.github.com
+204.232.175.78 pages.github.com
 
 #E#HostsX: HostsX èœ¯ä»¶å¹¿åè¿æ»€/éªè¯ç±?æžžæ EAç³»åïŒçº¢è­Šç­ïŒ?
 127.0.0.1        gosredirector.ea.com
