@@ -356,11 +356,16 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 autorun = true
 autorunApps = 
 {
+    "xfconfd",
+    "xfsettingsd",
+    "xfce4-power-manager",
+    "xfce4-volumed",
+    "xfce4-notes",
     "gnome-session",
     "gnome-sound-applet",
- --   "gnome-settings-daemon",
+--    "gnome-settings-daemon",
     "gnome-screensaver",
-    "nm-applet",
+    "kupfer",
     "emacsclient",
     "pidgin",
 }
@@ -372,8 +377,4 @@ if autorun then
     end
 end
 
-awful.util.spawn_with_shell("gnome-settings-daemon")
---awful.util.spawn_with_shell("gnome-screensaver &")
---awful.util.spawn_with_shell("nm-applet &")
---awful.util.spawn_with_shell("emacsclient &")
 --- }}}
