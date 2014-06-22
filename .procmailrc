@@ -1,6 +1,6 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 SHELL=/bin/bash
-MAILDIR=$HOME/Mail
+MAILDIR=$HOME/muttMail
 DEFAULT=$MAILDIR/inbox
 LOGFILE=$MAILDIR/.procmaillog
 
