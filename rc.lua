@@ -248,7 +248,12 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+-- screen saver
+    awful.key({"Mod1", "Control"}, "l", 
+	function ()
+    	    awful.util.spawn('gnome-screensaver-command --lock')
+	end)
 )
 
 -- Compute the maximum number of digit we need, limited to 9
@@ -356,14 +361,14 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 autorun = true
 autorunApps = 
 {
-    "xfconfd",
-    "xfsettingsd",
-    "xfce4-power-manager",
-    "xfce4-volumed",
-    "xfce4-notes",
+--    "xfconfd",
+--    "xfsettingsd",
+--    "xfce4-power-manager",
+--    "xfce4-volumed",
+--    "xfce4-notes",
     "gnome-session",
     "gnome-sound-applet",
---    "gnome-settings-daemon",
+    "gnome-settings-daemon",
     "gnome-screensaver",
     "kupfer",
     "emacsclient",
