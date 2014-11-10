@@ -8,7 +8,7 @@ set message_cachedir=”~/.mutt/cache/bodies”
 set certificate_file=~/.mutt/certificates
 
 #编辑器 直接在 Mutt 的终端里使用非图形界面的 Emacs (emacs -nw)
-set editor="emacs -nw"
+set editor="emacs -nw -q"
 set signature="sign"
 
 
@@ -17,12 +17,12 @@ set signature="sign"
 set sendmail="/usr/bin/msmtp"
 
 #建立信箱
-set folder="~/Mail"
-set mbox="~/Mail/inbox"
+set folder="~/muttMail"
+set mbox="~/muttMail/inbox"
 #set mbox_type=maildir
-set spoolfile="~/Mail/inbox"
-set postponed="~/Mail/postponed"
-set record="~/Mail/sent"
+set spoolfile="~/muttMail/inbox"
+set postponed="~/muttMail/postponed"
+set record="~/muttMail/sent"
 
 # 让mutt监视下面几个邮箱，并随时报告新邮件
 mailboxes "=inbox"
@@ -66,7 +66,7 @@ set resolve=yes
 #地址簿
 #source ~/.mutt.alias
 #你发出的邮件保存到那个信箱文件？比如可以像我这样每个月发出的信件放在不同的文件里。
-set record="~/Mail/=sent-mail-`date +%Y-%m`"
+set record="~/muttMail/=sent-mail-`date +%Y-%m`"
 #你的终端支持哪一种编码的显示？这个必须和你的终端编码一样。推荐用utf8
 set charset="utf-8"
 #send_charset
@@ -87,5 +87,12 @@ set envelope_from=yes
 macro index G "!getmail\n" "Invoke getmail"
 macro pager G "!getmail\n" "Invoke getmail"
 
+source ~/.gpg.rc
+
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = A6D42018
+set pgp_timeout = 3600
+set crypt_autosign = yes
+set crypt_replyencrypt = yes
 
 #邮件头的颜色
