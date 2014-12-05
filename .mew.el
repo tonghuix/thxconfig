@@ -15,16 +15,16 @@
 (add-hook 'mew-before-cite-hook 'mew-header-goto-body)
 (add-hook 'mew-draft-mode-newdraft-hook 'mew-draft-insert-signature)
 ;签名档 请确认你写好了签名文件，不自动加分隔符
-;; (setq mew-signature-file "~/Mail/signature")
-;; (setq mew-signature-as-lastpart t)
-;; (setq mew-signature-insert-last t)
+(setq mew-signature-file "~/sign")
+(setq mew-signature-as-lastpart t)
+(setq mew-signature-insert-last t)
 ;Spam
 (setq mew-summary-form-mark-spam t)
 (setq mew-use-cached-passwd t)
 ;GPG签名设置（非加密） 首先确认你有没有GPG ID。
-;; (setq mew-pgp-ascii-suffix "84599A3C")
-;; (setq mew-protect-privacy-always t)
-;; (setq mew-protect-privacy-always-type 'pgp-signature)
+(setq mew-pgp-ascii-suffix "A6D42018")
+(setq mew-protect-privacy-always t)
+(setq mew-protect-privacy-always-type 'pgp-signature)
 
 ;; w3m
 (setq mew-prog-text/html         'mew-mime-text/html-w3m) ;; See w3m.el
