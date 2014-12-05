@@ -24,10 +24,17 @@ servers = (
   { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
-  { 
-    address = "irc.gimp.org"; 
-    chatnet = "GIMPnet"; 
-    port = "7000"; 
+  {
+    address = "irc.flightgear.org";
+    chatnet = "FlightGear";
+    port = "6659";
+    use_ssl = "yes";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.gimp.org";
+    chatnet = "GIMPnet";
+    port = "7000";
     autoconnect = "yes";
   },
   {
@@ -96,29 +103,40 @@ chatnets = {
     max_msgs = "3";
     max_whois = "30";
   };
-  GIMPnet = {
-    type = "IRC";
-    nick = "tonghuix";
-  };
+  GIMPnet = { type = "IRC"; nick = "tonghuix"; };
   SILC = { type = "SILC"; };
   Ubuntu = { type = "IRC"; };
   freenode = {
     type = "IRC";
     nick = "tonghuix";
-    autosendcmd = "/^msg nickserv identify yui0258;wait 2000";
+    autosendcmd = "/^msg nickserv identify ******;wait 2000";
   };
   nickserv = { type = "IRC"; autosendcmd = "“/^msg"; };
+  LinkNet = { type = "IRC"; };
+  FlightGear = { 
+    type = "IRC"; 
+    nick = "tonghuix";
+    autosendcmd = "/^msg nickserv identify ******;wait 2000";
+  };
 };
 
 channels = (
   { name = "#gnome"; chatnet = "gimpnet"; autojoin = "Yes"; },
-  { name = "#gnome-asia"; chatnet = "gimpnet"; autojoin = "Yes"; },
-  { name = "#gnome-cn"; chatnet = "gimpnet"; autojoin = "Yes"; },
+  { name = "#opw"; chatnet = "gimpnet"; autojoin = "Yes"; },
+  { name = "#opw-admin"; chatnet = "gimpnet"; autojoin = "Yes"; },
+  { name = "#engagement"; chatnet = "gimpnet"; autojoin = "Yes"; },
   { name = "#ubuntu-cn"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#coscup"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#g0v.tw"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#yocto"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#open-drone"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "#openbrd"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#opensuse-cn"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#fedora-zh"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#chinalug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#beijinglug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#flightgear"; chatnet = "FlightGear"; autojoin = "yes"; },
+  { name = "#airliner"; chatnet = "FlightGear"; autojoin = "yes"; },
+  { name = "#flyingclub"; chatnet = "FlightGear"; autojoin = "yes"; },
+  { name = "#fg_school"; chatnet = "FlightGear"; autojoin = "yes"; }
 );
 
 aliases = {
