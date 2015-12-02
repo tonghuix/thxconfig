@@ -38,6 +38,7 @@
 
 (setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
 
+(setq mew-ssl-verify-level 0) ;;没有会导致验证失败
 
 ;;
 ;; SSL/TLS
