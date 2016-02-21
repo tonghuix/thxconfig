@@ -288,7 +288,8 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+    awful.key({ "Control", "Mod1" }, "l", function () awful.util.spawn("xscreensaver-command --lock") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -354,6 +355,7 @@ for i = 1, 9 do
                           end
                       end
                   end))
+
 end
 
 clientbuttons = awful.util.table.join(
@@ -475,14 +477,16 @@ autorunApps =
 --    "xfce4-volumed",
 --    "xfce4-notes",
 --    "gnome-session",
+    "xscreensaver -nosplash",
     "gnome-sound-applet",
     "gnome-settings-daemon",
     "gnome-screensaver",
     "kupfer",
-    "volumeicon",
+    "volti",
     "emacsclient",
     "pidgin",
     "nm-applet",
+--    "guake",
 }
 
 
