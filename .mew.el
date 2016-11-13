@@ -1,8 +1,8 @@
 ;;
 ;; use emacs-w3m in Mew
-;;(require 'mew-w3m)
-;;(setq mew-prog-html '(mew-mime-text/html-w3m nil nil))
-;;(setq mew-mime-multipart-alternative-list '("Text/Html" "Text/Plan" ".*"))
+(require 'mew-w3m)
+(setq mew-prog-html '(mew-mime-text/html-w3m nil nil))
+(setq mew-mime-multipart-alternative-list '("Text/Html" "Text/Plan" ".*"))
 
 (setq mew-use-cached-passwd t)
 
@@ -15,9 +15,9 @@
 (add-hook 'mew-before-cite-hook 'mew-header-goto-body)
 (add-hook 'mew-draft-mode-newdraft-hook 'mew-draft-insert-signature)
 ;签名档 请确认你写好了签名文件，不自动加分隔符
-(setq mew-signature-file "~/sign")
-(setq mew-signature-as-lastpart t)
-(setq mew-signature-insert-last t)
+ (setq mew-signature-file "~/sign")
+ (setq mew-signature-as-lastpart t)
+ (setq mew-signature-insert-last t)
 ;Spam
 (setq mew-summary-form-mark-spam t)
 (setq mew-use-cached-passwd t)
@@ -38,7 +38,6 @@
 
 (setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
 
-(setq mew-ssl-verify-level 0) ;;没有会导致验证失败
 
 ;;
 ;; SSL/TLS

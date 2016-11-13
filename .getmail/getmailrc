@@ -3,6 +3,7 @@ type = SimpleIMAPSSLRetriever
 server = imap.gmail.com
 port = 993
 username = tonghuix@gmail.com
+password = ****
 #
 [destination]
 type = MDA_external

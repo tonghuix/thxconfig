@@ -18,14 +18,14 @@ set sendmail="/usr/bin/msmtp"
 
 #建立信箱
 set folder="~/muttMail"
-set mbox="~/muttMail/inbox"
-#set mbox_type=maildir
-set spoolfile="~/muttMail/inbox"
+set mbox="~/muttMail/INBOX"
+set mbox_type=maildir
+set spoolfile="~/muttMail/INBOX"
 set postponed="~/muttMail/postponed"
 set record="~/muttMail/sent"
 
 # 让mutt监视下面几个邮箱，并随时报告新邮件
-mailboxes "=inbox"
+mailboxes "=INBOX"
 
 set check_new = yes
 set timeout = 600
@@ -43,11 +43,13 @@ set quit=ask-yes
 #html类型的附件是允许直接通过 .mailcap 浏览的？
 #doc类型的附件通过wvware转成html 浏览
 auto_view text/html application/msword
+alternative_order text/plain text/html *
+bind editor ^T complete
 
 #这也是一个提示性变量。它是确定当你退出时，是否提示你把信件从 spool 移动到的 mbox 文件。
 set move=no
 #当 Mutt 用 thread 方式显示时，是否用纯 ascii 表示树状列表。
-set ascii_chars=yes
+# set ascii_chars=yes
 #回信时是否包含原文。
 set include
 #回信的引文之前插入那个符号？
@@ -56,7 +58,12 @@ set indent_str="> "
 my_hdr From: tonghuix@gmail.com
 
 #当用 thread 排序方式时，我们对各个 thread 的相对排序顺序。
-set sort_aux=date
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
 #如果翻到最后，再按往下翻也不会翻到下一封信件
 set pager_stop
 #如果设置，当你按 "r" 回信时，就不会再提示你输入回信地址和主题，直接进入编辑模式。
